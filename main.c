@@ -120,7 +120,7 @@ static void run_test(struct loop_timer *t)
 	}
 
 	// Connect to www.duck.com on port 443
-	println("Connecting www.duck.com", VDP_TXT_COL_WHITE);
+	println("Connecting 192.168.0.8:1337", VDP_TXT_COL_WHITE);
 	err = mw_tcp_connect(1, "192.168.0.8", "1337", NULL);
     if (err != MW_ERR_NONE) {
         goto err;
@@ -145,7 +145,8 @@ static void run_test(struct loop_timer *t)
 
     mw_sleep(MS_TO_FRAMES(1000));
 
-    err = mw_send_sync(channel, strout, strlen(strout) * sizeof(char), MS_TO_FRAMES(10000));
+    int16_t sendBufLength = BUFF_LENGHT;
+    err = mw_send_sync(1, strout, sendBufLength, MS_TO_FRAMES(10000));
     if (err != MW_ERR_NONE) {
         goto err;
     }

@@ -26,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+            <state relative-caret-position="135">
+              <caret line="122" column="40" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
               <folding>
                 <element signature="e#262#278#0" expanded="true" />
               </folding>
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mw/megawifi.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="491" column="24" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="24" />
+            <state relative-caret-position="210">
+              <caret line="491" column="12" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -165,16 +165,15 @@
       <workItem from="1562665257304" duration="2432000" />
       <workItem from="1562674742530" duration="340000" />
       <workItem from="1562675350487" duration="259000" />
-      <workItem from="1562676403848" duration="9776000" />
+      <workItem from="1562676403848" duration="10725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15791000" />
+    <option name="totallyTimeSpent" value="16740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1926" height="1174" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18051118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -207,13 +206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mw/megawifi.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="491" column="24" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mw/megawifi.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -235,10 +227,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mw/megawifi.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="491" column="12" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="122" column="40" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
           <folding>
             <element signature="e#262#278#0" expanded="true" />
           </folding>
