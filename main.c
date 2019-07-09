@@ -11,8 +11,6 @@
 #include "mw/megawifi.h"
 #include "mw/loop.h"
 
-#include <stdlib.h>
-
 /// Length of the wflash buffer
 #define MW_BUFLEN	1440
 
@@ -125,11 +123,11 @@ static void run_test(struct loop_timer *t)
 
 	println("DONE!", VDP_TXT_COL_CYAN);
 
-    uint8_t *channel = malloc(sizeof(uint8_t)); // no funciona con o sin inicializar
-    char *str = malloc(1024 * sizeof(char));
-	int16_t bufLength = 1024;
+    uint8_t *channel; // no funciona con o sin inicializar
+    char *str;
+	int16_t bufLength = 128;
 
-    err = mw_recv_sync(channel, str, &bufLength, MS_TO_FRAMES(5000));
+    err = mw_recv_sync(channel, str, &bufLength, MS_TO_FRAMES(30000));
     if (err != MW_ERR_NONE) {
         goto err;
     } else {
