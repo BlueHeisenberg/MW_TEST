@@ -26,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
+            <state relative-caret-position="435">
+              <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
               <folding>
                 <element signature="e#262#278#0" expanded="true" />
               </folding>
@@ -37,14 +37,18 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mw/lsd.c">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mw/megawifi.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="473" column="12" selection-start-line="473" selection-start-column="12" selection-end-line="473" selection-end-column="12" />
+            <state relative-caret-position="525">
+              <caret line="491" column="24" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -52,8 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mw/megawifi.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="276">
+              <caret line="188" column="8" lean-forward="true" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mw/lsd.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="126" column="24" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -63,6 +76,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>mw_tcp_connect</find>
+      <find>mw_send_sync</find>
+      <find>lsd_send</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,6 +86,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/mw/lsd.c" />
         <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
@@ -120,6 +136,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mw-wf-cli/src" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,12 +165,12 @@
       <workItem from="1562665257304" duration="2432000" />
       <workItem from="1562674742530" duration="340000" />
       <workItem from="1562675350487" duration="259000" />
-      <workItem from="1562676403848" duration="2702000" />
+      <workItem from="1562676403848" duration="9776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8717000" />
+    <option name="totallyTimeSpent" value="15791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1926" height="1174" extended-state="6" />
@@ -190,27 +207,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mw/lsd.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mw/megawifi.c">
+    <entry file="file://$PROJECT_DIR$/mw/megawifi.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state relative-caret-position="525">
+          <caret line="491" column="24" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mw/megawifi.h">
+    <entry file="file://$PROJECT_DIR$/mw/megawifi.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="473" column="12" selection-start-line="473" selection-start-column="12" selection-end-line="473" selection-end-column="12" />
+        <state relative-caret-position="276">
+          <caret line="188" column="8" lean-forward="true" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mw/lsd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="126" column="24" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mw/lsd.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
+        <state relative-caret-position="435">
+          <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
           <folding>
             <element signature="e#262#278#0" expanded="true" />
           </folding>

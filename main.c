@@ -96,8 +96,9 @@ static void udp_reuse_test(void)
 	mw_udp_reuse_recv(pkt, MW_BUFLEN, NULL, udp_recv_cb);
 }
 
-char strin[15];
-
+#define BUFF_LENGHT 256
+char strin[BUFF_LENGHT];
+const char* strout = "Sending text to the future from BLASTPROCESSING";
 static void run_test(struct loop_timer *t)
 {
 	enum mw_err err;
@@ -111,29 +112,45 @@ static void run_test(struct loop_timer *t)
 	err = mw_ap_assoc_wait(MS_TO_FRAMES(30000));
 	if (err != MW_ERR_NONE) {
 		goto err;
+	} else {
+        // Wait an additional second to ensure DNS service is up
+        mw_sleep(MS_TO_FRAMES(1000));
+        println("DONE!", VDP_TXT_COL_CYAN);
+        println(NULL, 0);
 	}
-	// Wait an additional second to ensure DNS service is up
-	mw_sleep(MS_TO_FRAMES(1000));
-	println("DONE!", VDP_TXT_COL_CYAN);
-	println(NULL, 0);
 
 	// Connect to www.duck.com on port 443
 	println("Connecting www.duck.com", VDP_TXT_COL_WHITE);
-	err = mw_tcp_connect(1, "www.duck.com", "443", NULL);
-
-	println("DONE!", VDP_TXT_COL_CYAN);
-
-    uint8_t *channel; // no funciona con o sin inicializar
-    char *str;
-	int16_t bufLength = 128;
-
-    err = mw_recv_sync(channel, str, &bufLength, MS_TO_FRAMES(30000));
+	err = mw_tcp_connect(1, "192.168.0.8", "1337", NULL);
     if (err != MW_ERR_NONE) {
         goto err;
-    } else {
-        println(str, VDP_TXT_COL_WHITE);
     }
 
+    println("DONE!", VDP_TXT_COL_CYAN);
+
+    uint8_t channel = 1;
+	int16_t bufLength = BUFF_LENGHT;
+
+    err = mw_recv_sync(&channel, strin, &bufLength, MS_TO_FRAMES(5000));
+    if (err != MW_ERR_NONE) {
+        goto err;
+    }
+
+    println(NULL, 0);
+    println(NULL, 0);
+
+    println("Received: ", 0);
+
+    println(strin, VDP_TXT_COL_WHITE);
+
+    mw_sleep(MS_TO_FRAMES(1000));
+
+    err = mw_send_sync(channel, strout, strlen(strout) * sizeof(char), MS_TO_FRAMES(10000));
+    if (err != MW_ERR_NONE) {
+        goto err;
+    }
+
+    goto out;
 
 	// Test UDP in normal mode
 	//udp_normal_test();
@@ -143,11 +160,12 @@ static void run_test(struct loop_timer *t)
 
 err:
     println("ERROR", VDP_TXT_COL_MAGENTA);
-    mw_tcp_disconnect(1);
-    mw_ap_disassoc();
 
 out:
 	loop_timer_del(t);
+
+    mw_tcp_disconnect(1);
+    mw_ap_disassoc();
 }
 
 /// MegaWiFi initialization
